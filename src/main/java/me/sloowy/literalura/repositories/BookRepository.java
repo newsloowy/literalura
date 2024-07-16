@@ -10,9 +10,9 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     boolean existsByTitle(String title);
 
-    @Query("SELECT DISTINCT b.languages FROM Book b ORDER BY b.languages")
+    @Query("SELECT DISTINCT b.language FROM Book b ORDER BY b.language")
     List<String> listLanguage();
 
-    @Query("SELECT b FROM Book b WHERE b.languages = :language")
+    @Query("SELECT b FROM Book b WHERE b.language = :language")
     List<Book> findByLanguage(String language);
 }

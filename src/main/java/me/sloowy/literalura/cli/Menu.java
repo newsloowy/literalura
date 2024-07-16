@@ -69,7 +69,6 @@ public class Menu {
             }
         }
     }
-
     private void newBook() {
         System.out.println("Digite o nome do livro que deseja inserir na base de dados:");
         var bookSearched = scanner.nextLine();
@@ -134,4 +133,5 @@ public class Menu {
             e.printStackTrace();
         }
     }
+
 }
